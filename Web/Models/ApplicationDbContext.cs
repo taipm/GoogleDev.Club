@@ -79,7 +79,8 @@ namespace Web.Models
 
         public ArticleModel GetArticleById(int id)
         {
-            return new ArticleModel();
+            var article = GetArticles().Where(t => t.Id == id).FirstOrDefault();
+            return article;
         }
     }
 }

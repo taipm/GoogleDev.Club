@@ -1,5 +1,6 @@
 ﻿using CafeT.Html;
 using CafeT.Text;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,13 +36,26 @@ namespace Web.Mappers
             view.CreatedDate = model.CreatedDate;
             view.Title = GetRawText(model.Title);
             view.Description = GetRawText(model.Description);
-            if (!model.Content.IsNullOrEmptyOrWhiteSpace())
+            //if (!model.Content.IsNullOrEmptyOrWhiteSpace())
+            //{
+            //    if (model.Content.IsHtmlString())
+            //    {
+            //        view.Content = DecorHtml(model.Content);
+            //    }
+            //}
+
+            if (model.IsGoogleDoc())
             {
-                if (model.Content.IsHtmlString())
-                {
-                    view.Content = DecorHtml(model.Content);
-                }
+                HtmlDocument document = model.Content.ToHtmlDocument();
+                HtmlNode docFooter = document
+                    .DocumentNode.SelectSingleNode("//div[@id='footer']");
+                HtmlNode docHeader = document
+                    .DocumentNode.SelectSingleNode("//div[@id='header']");
+                model.Content = model.Content.Replace(docFooter.OuterHtml, "")
+                    .Replace(docHeader.OuterHtml,"");
             }
+            view.Content = DecorHtml(model.Content);
+            if (!model.Tags.IsNullOrEmptyOrWhiteSpace())
             view.Tags = model.Tags.Split(new char[] { ',', ';' }, StringSplitOptions.None);
             view.IsPublished = model.IsPublished;
             view.CreatedBy = model.CreatedBy;
@@ -81,6 +95,7 @@ namespace Web.Mappers
         /// <returns></returns>
         public static string GetRawText(string text)
         {
+            if (text.IsNullOrEmptyOrWhiteSpace()) return text;
             string output = text; //string output = text.DeleteFirst("\"").DeleteLastest("\"");
             output = output.Replace("\n", "<br />");
             output = output.Replace("\\", "\"");
@@ -89,6 +104,7 @@ namespace Web.Mappers
 
         public static string DecorHtml(string htmlText)
         {
+            if (htmlText.IsNullOrEmptyOrWhiteSpace()) return htmlText;
             string html = string.Empty;
             html = htmlText.Replace("\n", "<br />");
             html = html.Replace("\\", "\"");

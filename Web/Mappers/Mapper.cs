@@ -25,7 +25,7 @@ namespace Web.Mappers
             model.IsPublished = bool.Parse(GetFieldValue(entryItem, "IsPublished"));
             model.MetaDescription = GetFieldValue(entryItem, "MetaDescription");
             model.MetaKeywords = GetFieldValue(entryItem, "MetaKeywords");
-
+           
             return model;
         }
         #region View
@@ -36,24 +36,8 @@ namespace Web.Mappers
             view.CreatedDate = model.CreatedDate;
             view.Title = GetRawText(model.Title);
             view.Description = GetRawText(model.Description);
-            //if (!model.Content.IsNullOrEmptyOrWhiteSpace())
-            //{
-            //    if (model.Content.IsHtmlString())
-            //    {
-            //        view.Content = DecorHtml(model.Content);
-            //    }
-            //}
 
-            if (model.IsGoogleDoc())
-            {
-                HtmlDocument document = model.Content.ToHtmlDocument();
-                HtmlNode docFooter = document
-                    .DocumentNode.SelectSingleNode("//div[@id='footer']");
-                HtmlNode docHeader = document
-                    .DocumentNode.SelectSingleNode("//div[@id='header']");
-                model.Content = model.Content.Replace(docFooter.OuterHtml, "")
-                    .Replace(docHeader.OuterHtml,"");
-            }
+
             view.Content = DecorHtml(model.Content);
             if (!model.Tags.IsNullOrEmptyOrWhiteSpace())
             view.Tags = model.Tags.Split(new char[] { ',', ';' }, StringSplitOptions.None);

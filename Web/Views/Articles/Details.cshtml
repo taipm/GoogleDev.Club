@@ -11,17 +11,11 @@
     <meta name="description" content="@Model.MetaDescription" />
 </head>
 <div class="row">
-    <div class="col-md-9">
-        <h4>@Html.Raw(Model.Title)</h4>
-        <hr />
-        <p class="text-justify">
-            @Html.Raw(Model.Description)
-        </p>
-        <p>
-            @Html.Raw(Model.Content)
-        </p>
+    <div class="col-md-8">
+        @Html.Raw(Model.Content)
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
+        @Html.Raw(Model.Description)
         @*@Html.Raw("Ngày: " + Model.CreatedDate.TimeAgo())*@
         @Html.Raw("Tác giả: " + Model.CreatedBy)<br />
         <img src="@Model.ImageUrl" /> <br />
@@ -30,7 +24,8 @@
 </div>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a href="@Model.EditLink" title="Edit">Edit</a>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.EditLink }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>

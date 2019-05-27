@@ -7,19 +7,21 @@
 
 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 <link href="~/Content/PagedList.css" rel="stylesheet" />
+
+
 <div id="paging">
     <ul class="list-group">
         @foreach (var item in Model)
         {
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         @if (item.ImageUrl.IsImageUrl())
                         {
                             <img src="@item.ImageUrl" class="img-fluid" />
                         }
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <h5>
                             @Html.ActionLink(item.Title, "Details", "Articles", new { id = item.GenerateSlug() }, null)
                         </h5>
@@ -28,17 +30,20 @@
                             Tác giả: <span class="text-danger">@item.CreatedBy</span>
                         </p>
 
-                        <p class="text-justify">
-                            @Html.Raw(item.Description.Replace(@"\n", "<br />").Replace(@"\", ""))
+                        @*<p class="text-justify">
+                                @Html.Raw(item.Description.Replace(@"\n", "<br />").Replace(@"\", ""))
+                            </p>*@
+                        <p class="post-desc">
+                            @Html.Raw(item.Description)
                         </p>
                         @*@if (!item.ContentUrl.GetDomain().Contains("google.com"))
-                        {
-                            <p>Nguồn: @Html.Raw(item.ContentUrl.GetDomain())</p>
-                        }*@
+                            {
+                                <p>Nguồn: @Html.Raw(item.ContentUrl.GetDomain())</p>
+                            }*@
 
                         @*<p>
-                            Từ khóa <span class="text-danger">@item.Tags.Replace(@"\n", " ")</span>
-                        </p>*@
+                                Từ khóa <span class="text-danger">@item.Tags.Replace(@"\n", " ")</span>
+                            </p>*@
                     </div>
                 </div>
             </li>

@@ -35,53 +35,8 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FParsec, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40ccfc0a09edbb5d, processorArchitecture=MSIL">
-      <HintPath>..\packages\FParsec.1.0.3\lib\net40-client\FParsec.dll</HintPath>
-    </Reference>
-    <Reference Include="FParsecCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40ccfc0a09edbb5d, processorArchitecture=MSIL">
-      <HintPath>..\packages\FParsec.1.0.3\lib\net40-client\FParsecCS.dll</HintPath>
-    </Reference>
-    <Reference Include="FSharp.Core, Version=4.6.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FSharp.Core.4.6.2\lib\net45\FSharp.Core.dll</HintPath>
-    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\HtmlAgilityPack.1.11.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.NRefactory.5.5.9\lib\net40\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory.Cecil, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.NRefactory.5.5.9\lib\net40\ICSharpCode.NRefactory.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.NRefactory.5.5.9\lib\net40\ICSharpCode.NRefactory.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.NRefactory.5.5.1\lib\Net40\ICSharpCode.NRefactory.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="MathNet.Numerics, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Numerics.4.7.0\lib\net461\MathNet.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="MathNet.Numerics.FSharp, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Numerics.FSharp.4.7.0\lib\net45\MathNet.Numerics.FSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="MathNet.Symbolics, Version=0.20.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Symbolics.0.20.0\lib\net461\MathNet.Symbolics.dll</HintPath>
-    </Reference>
-    <Reference Include="MathParse, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathParse.1.0.0\lib\MathParse.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Mdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Pdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Rocks, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

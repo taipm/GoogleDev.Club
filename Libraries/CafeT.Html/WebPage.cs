@@ -157,7 +157,10 @@ namespace CafeT.Html
         {
             return html.DocumentNode.GetNodesByClasses(className);
         }
-
+        public HtmlNode GetNodeById(string idName)
+        {
+            return html.GetElementbyId(idName);
+        }
         public List<HtmlNode> GetNodesByXPath(string xpath)
         {
             return html.DocumentNode.SelectNodes(xpath).ToList();

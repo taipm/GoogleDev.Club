@@ -22,6 +22,7 @@ namespace Web.Models
         public string Tags { set; get; }
         public bool IsPublished { set; get; }
         public string CountViews { set; get; }
+        public string DocumentId { set; get; }
 
         //SEO ...
         public string MetaDescription { set; get; }

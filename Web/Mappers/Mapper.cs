@@ -25,7 +25,8 @@ namespace Web.Mappers
             model.IsPublished = bool.Parse(GetFieldValue(entryItem, "IsPublished"));
             model.MetaDescription = GetFieldValue(entryItem, "MetaDescription");
             model.MetaKeywords = GetFieldValue(entryItem, "MetaKeywords");
-           
+            model.DocumentId = GetFieldValue(entryItem, "DocumentId");
+
             return model;
         }
         #region View
@@ -46,6 +47,7 @@ namespace Web.Mappers
             view.MetaKeywords = model.Tags + ";" + model.MetaKeywords;
             view.MetaDescription = model.MetaDescription;
 
+            view.EditLink = "https://docs.google.com/document/d/"+ model.DocumentId +"/edit";
             return view;
         }
 

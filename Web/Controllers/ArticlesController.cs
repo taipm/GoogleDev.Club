@@ -74,10 +74,12 @@ namespace Web.Controllers
                 }
                 if (!page.HtmlContent.IsNullOrEmptyOrWhiteSpace())
                 {
-                    //model.Content = page.GetNodesByClass("main-content-inner clearfix")
+                    //model.Content = page.GetNodesByClass("contents")
                     //    .FirstOrDefault()
                     //    .InnerHtml;
-                    model.Content = page.HtmlContent;
+                    model.Content = page.GetNodeById("contents")
+                        .InnerHtml;
+                    //model.Content = page.HtmlContent;
                 }
             }
 

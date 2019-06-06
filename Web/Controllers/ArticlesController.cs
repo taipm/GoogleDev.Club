@@ -88,5 +88,37 @@ namespace Web.Controllers
 
             return View(view);
         }
+        //public ActionResult Details(string contentUrl)
+        //{
+            
+        //    var model = db.GetArticleByContentUrl(contentUrl);
+        //    if (!model.ContentUrl.IsNullOrEmptyOrWhiteSpace() && model.ContentUrl.IsUrl())
+        //    {
+        //        var link = model.ContentUrl;
+        //        WebPage page = new WebPage(link);
+        //        page.Load();
+        //        if (!page.Title.IsNullOrEmptyOrWhiteSpace())
+        //        {
+        //            if (!page.IsGoogleDoc())
+        //            {
+        //                model.Title = page.Title;
+        //            }
+        //        }
+        //        if (!page.HtmlContent.IsNullOrEmptyOrWhiteSpace())
+        //        {
+        //            //model.Content = page.GetNodesByClass("contents")
+        //            //    .FirstOrDefault()
+        //            //    .InnerHtml;
+        //            model.Content = page.GetNodeById("contents")
+        //                .InnerHtml;
+        //            //model.Content = page.HtmlContent;
+        //        }
+        //    }
+
+        //    ViewBag.Title = model.Title;
+        //    ArticleView view = Mappers.Mapper.ArticleToView(model);
+
+        //    return View(view);
+        //}
     }
 }

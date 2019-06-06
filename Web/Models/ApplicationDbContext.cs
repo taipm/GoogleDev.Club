@@ -78,6 +78,12 @@ namespace Web.Models
             }
         }
 
+        public ArticleModel GetArticleByContentUrl(string url)
+        {
+            var article = GetArticles().Where(t => t.ContentUrl == url).FirstOrDefault();
+            return article;
+        }
+
         public ArticleModel GetArticleById(int id)
         {
             var article = GetArticles().Where(t => t.Id == id).FirstOrDefault();

@@ -18,6 +18,7 @@ namespace Web.ModelViews
         public bool IsPublished { set; get; }
         public string CountViews { set; get; }
         public string EditLink { set; get; }
+        public string DocumentId { set; get; }
         //SEO ...
         public string MetaDescription { set; get; }
         public string MetaKeywords { set; get; }

@@ -4,14 +4,25 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<!-- Contact Form - sent to a Google Sheet -->
+<form id='foo'>
+    <p>
+        <label>Name</label>
+        <input id='name' name='name' type='text'>
+    </p><p>
+        <label>Email Address</label>
+        <input id='email' name='email' type='email'>
+    </p><p>
+        <label>Phone Number</label>
+        <input id='phone' name='phone' type='tel'>
+    </p><p>
+        <label>Message</label>
+        <textarea id='message' name='message' rows='5'></textarea>
+    </p>
+    <div id='success'></div>
+    <button type='submit'>Send</button>
+</form>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="~/Helpers/GoogleSheets.js"></script>

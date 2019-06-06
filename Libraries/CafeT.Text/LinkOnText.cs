@@ -33,6 +33,7 @@ namespace CafeT.Text
 
         public static string GetDomain(this string url)
         {
+            if (url == null) return "";
             var doubleSlashesIndex = url.IndexOf("://");
             var start = doubleSlashesIndex != -1 ? doubleSlashesIndex + "://".Length : 0;
             var end = url.IndexOf("/", start);

@@ -451,6 +451,7 @@ namespace CafeT.Text
 
         public static string WordsToString(this string[] words)
         {
+            if (words == null) return string.Empty;
             string _result = string.Empty;
             foreach (string _word in words)
             {

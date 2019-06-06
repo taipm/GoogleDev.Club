@@ -26,6 +26,7 @@ namespace Web.Mappers
             model.MetaDescription = GetFieldValue(entryItem, "MetaDescription");
             model.MetaKeywords = GetFieldValue(entryItem, "MetaKeywords");
             model.DocumentId = GetFieldValue(entryItem, "DocumentId");
+            model.ImageUrl = GetFieldValue(entryItem, "ImageUrl");
 
             return model;
         }
@@ -46,6 +47,8 @@ namespace Web.Mappers
             view.CreatedBy = model.CreatedBy;
             view.MetaKeywords = model.Tags + ";" + model.MetaKeywords;
             view.MetaDescription = model.MetaDescription;
+            view.ImageUrl = model.ImageUrl;
+            view.DocumentId = model.DocumentId;
 
             view.EditLink = "https://docs.google.com/document/d/"+ model.DocumentId +"/edit";
             return view;
